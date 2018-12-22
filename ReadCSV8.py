@@ -44,7 +44,7 @@ def readCSVs():
     searchPath = r".\data\*.csv"
     pathArray = glob.glob(searchPath)
     
-    #6つにマルチスレッド化させる
+    #5つにマルチスレッド化させる
     pool = Pool(5)
     CSV = pd.concat(pool.map(readCSV,pathArray))
     return CSV
